@@ -32,5 +32,13 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.14",
     "morgan": "^1.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevHumbleChris/code-chris.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DevHumbleChris/code-chris/issues"
+  },
+  "homepage": "https://github.com/DevHumbleChris/code-chris#readme"
 }
