@@ -97,10 +97,13 @@
 
             <!-- Logo -->
             <div class="ml-4 flex lg:ml-0">
-              <a href="#">
-                <span class="sr-only">Workflow</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600" alt="" />
-              </a>
+              <router-link to="">
+                <span class="sr-only">Coder Chris</span>
+                <div class="flex items-center">
+                  <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600" alt="" />
+                  <span class="author block">Coder Chris</span>
+                </div>
+              </router-link>
             </div>
 
             <!-- Flyout menus -->
@@ -371,3 +374,14 @@ export default defineComponent({
   }
 })
 </script>
+
+<style>
+.author {
+  text-shadow:1px 1px 0 rgb(223,223,223),2px 2px 0 rgb(191,191,191),3px 3px 0 rgb(159,159,159),4px 4px 0 rgb(128,128,128),5px 5px 0 rgb(96,96,96),6px 6px 0 rgb(64,64,64),7px 7px 0 rgb(32,32,32),8px 8px 1px rgba(0,0,0,1);
+  -webkit-text-shadow:1px 1px 0 rgb(223,223,223),2px 2px 0 rgb(191,191,191),3px 3px 0 rgb(159,159,159),4px 4px 0 rgb(128,128,128),5px 5px 0 rgb(96,96,96),6px 6px 0 rgb(64,64,64),7px 7px 0 rgb(32,32,32),8px 8px 1px rgba(0,0,0,1);
+  -moz-text-shadow:1px 1px 0 rgb(223,223,223),2px 2px 0 rgb(191,191,191),3px 3px 0 rgb(159,159,159),4px 4px 0 rgb(128,128,128),5px 5px 0 rgb(96,96,96),6px 6px 0 rgb(64,64,64),7px 7px 0 rgb(32,32,32),8px 8px 1px rgba(0,0,0,1);
+  color:#ffffff;
+  font-size:55px;
+  font-family:Verdana, Geneva, sans-serif;
+}
+</style>
