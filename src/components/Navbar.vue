@@ -295,7 +295,10 @@ const navigation = {
     { name: 'About Me', href: '#', fontIcon: ['fas', 'user-astronaut'] },
     { name: 'Skills', href: '#', fontIcon: ['fas', 'brain'] },
     { name: 'Projects', href: '#', fontIcon: ['fas', 'laptop-code'] },
+<<<<<<< HEAD
     { name: 'My Blog', href: '#', fontIcon: ['fas', 'book-reader'] },
+=======
+>>>>>>> frontend
     { name: 'Contacts', href: '#', fontIcon: ['fas', 'address-card'] }
   ]
 }
