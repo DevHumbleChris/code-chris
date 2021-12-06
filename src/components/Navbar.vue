@@ -16,70 +16,60 @@
               </button>
             </div>
 
-            <!-- Links -->
-            <TabGroup as="div" class="mt-2">
-              <div class="border-b border-gray-200">
-                <TabList class="-mb-px flex px-4 space-x-8">
-                  <Tab as="template" v-for="category in navigation.categories" :key="category.name" v-slot="{ selected }">
-                    <button :class="[selected ? 'text-indigo-600 border-indigo-600' : 'text-gray-900 border-transparent', 'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium']">
-                      {{ category.name }}
-                    </button>
-                  </Tab>
-                </TabList>
-              </div>
-              <TabPanels as="template">
-                <TabPanel v-for="category in navigation.categories" :key="category.name" class="pt-10 pb-8 px-4 space-y-10">
-                  <div class="grid grid-cols-2 gap-x-4">
-                    <div v-for="item in category.featured" :key="item.name" class="group relative text-sm">
-                      <div class="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                        <img :src="item.imageSrc" :alt="item.imageAlt" class="object-center object-cover" />
-                      </div>
-                      <a :href="item.href" class="mt-6 block font-medium text-gray-900">
-                        <span class="absolute z-10 inset-0" aria-hidden="true" />
-                        {{ item.name }}
-                      </a>
-                      <p aria-hidden="true" class="mt-1">Shop now</p>
-                    </div>
-                  </div>
-                  <div v-for="section in category.sections" :key="section.name">
-                    <p :id="`${category.id}-${section.id}-heading-mobile`" class="font-medium text-gray-900">
-                      {{ section.name }}
-                    </p>
-                    <ul role="list" :aria-labelledby="`${category.id}-${section.id}-heading-mobile`" class="mt-6 flex flex-col space-y-6">
-                      <li v-for="item in section.items" :key="item.name" class="flow-root">
-                        <a :href="item.href" class="-m-2 p-2 block text-gray-500">
-                          {{ item.name }}
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </TabPanel>
-              </TabPanels>
-            </TabGroup>
-
-            <div class="border-t border-gray-200 py-6 px-4 space-y-6">
-              <div v-for="page in navigation.pages" :key="page.name" class="flow-root">
-                <a :href="page.href" class="-m-2 p-2 block font-medium text-gray-900">{{ page.name }}</a>
-              </div>
+            <!-- Logo -->
+            <div class="ml-4 flex justify-center lg:ml-0">
+              <router-link to="/">
+                <!-- Author Image -->
+                <div class="imgWrapper flex justify-center">
+                  <img src="../assets/author.jpg" alt="author" class="w-28 rounded-full">
+                </div>
+                <span class="sr-only">Coder Chris</span>
+                <p class="text-4xl font-extrabold">
+                  <FontAwesomeIcon :icon="['fas', 'code']" class="text-green-600 mx-1" />
+                  <span class="text-blue-700">Coder Chris</span>
+                </p>
+              </router-link>
             </div>
 
-            <div class="border-t border-gray-200 py-6 px-4 space-y-6">
-              <div class="flow-root">
-                <a href="#" class="-m-2 p-2 block font-medium text-gray-900">Sign in</a>
-              </div>
-              <div class="flow-root">
-                <a href="#" class="-m-2 p-2 block font-medium text-gray-900">Create account</a>
-              </div>
-            </div>
+            <p class="text-center font-base p-3 text-gray-500">
+                Am not a great programmer, just a good programmer with great habits.
+            </p>
 
-            <div class="border-t border-gray-200 py-6 px-4">
-              <a href="#" class="-m-2 p-2 flex items-center">
-                <img src="https://tailwindui.com/img/flags/flag-canada.svg" alt="" class="w-5 h-auto block flex-shrink-0" />
-                <span class="ml-3 block text-base font-medium text-gray-900">
-                  CAD
-                </span>
-                <span class="sr-only">, change currency</span>
+            <div class="absolute bottom-3 right-0 left-0 text-center mt-4 border-t border-gray-200 py-2 px-4">
+              <a href="https://github.com/DevHumbleChris" class="text-2xl mx-2">
+                <FontAwesomeIcon :icon="['fab', 'github']" />
               </a>
+              <a href="https://www.instagram.com/am.chris_ke/" class="text-2xl mx-2">
+                <FontAwesomeIcon :icon="['fab', 'instagram']" />
+              </a>
+              <a href="https://www.facebook.com/people/Humble-Chris/100011196098630/" class="text-2xl mx-2">
+                <FontAwesomeIcon :icon="['fab', 'facebook-square']" />
+              </a>
+              <a href="https://www.linkedin.com/in/dev-humble-chris-2870331aa/" class="text-2xl mx-2">
+                <FontAwesomeIcon :icon="['fab', 'linkedin']" />
+              </a>
+              <a href="https://twitter.com/AmChrisKE" class="text-2xl mx-2">
+                <FontAwesomeIcon :icon="['fab', 'twitter']" />
+              </a>
+              <a href="https://wa.me/message/BSLLTZE6NKUIF1" class="text-2xl mx-2">
+                <FontAwesomeIcon :icon="['fab', 'whatsapp']" />
+              </a>
+              <div>
+                Made With
+                <FontAwesomeIcon :icon="['fas', 'heart']" class="mx-1 text-red-600" />,
+                Am.Chris_KE
+              </div>
+            </div>
+
+            <div class="py-3 px-4 space-y-6">
+              <div v-for="page in navigation.pages" :key="page.name" class="flow-root">
+                <router-link :to="page.href" class="-m-2 p-2 block font-extrabold text-lg text-gray-900">
+                  <FontAwesomeIcon :icon="page.fontIcon" class="text-lg leading-lg text-black opacity-75" />
+                  <span class="uppercase mx-1">
+                    {{ page.name }}
+                  </span>
+                </router-link>
+              </div>
             </div>
           </div>
         </TransitionChild>
@@ -99,10 +89,10 @@
             <div class="ml-4 flex lg:ml-0">
               <router-link to="">
                 <span class="sr-only">Coder Chris</span>
-                <div class="flex items-center">
-                  <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600" alt="" />
-                  <span class="author block">Coder Chris</span>
-                </div>
+                <p class="text-2xl font-extrabold">
+                  <FontAwesomeIcon :icon="['fas', 'code']" class="text-green-600 mx-1" />
+                  <span class="text-blue-700">Coder Chris</span>
+                </p>
               </router-link>
             </div>
 
@@ -162,38 +152,6 @@
             </PopoverGroup>
 
             <div class="ml-auto flex items-center">
-              <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign in</a>
-                <span class="h-6 w-px bg-gray-200" aria-hidden="true" />
-                <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-800">Create account</a>
-              </div>
-
-              <div class="hidden lg:ml-8 lg:flex">
-                <a href="#" class="text-gray-700 hover:text-gray-800 flex items-center">
-                  <img src="https://tailwindui.com/img/flags/flag-canada.svg" alt="" class="w-5 h-auto block flex-shrink-0" />
-                  <span class="ml-3 block text-sm font-medium">
-                    CAD
-                  </span>
-                  <span class="sr-only">, change currency</span>
-                </a>
-              </div>
-
-              <!-- Search -->
-              <div class="flex lg:ml-6">
-                <a href="#" class="p-2 text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">Search</span>
-                  <SearchIcon class="w-6 h-6" aria-hidden="true" />
-                </a>
-              </div>
-
-              <!-- Cart -->
-              <div class="ml-4 flow-root lg:ml-6">
-                <a href="#" class="group -m-2 p-2 flex items-center">
-                  <ShoppingBagIcon class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
-                  <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
-                  <span class="sr-only">items in cart, view bag</span>
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -211,15 +169,10 @@ import {
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels,
   TransitionChild,
   TransitionRoot
 } from '@headlessui/vue'
-import { MenuIcon, SearchIcon, ShoppingBagIcon, XIcon } from '@heroicons/vue/outline'
+import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const navigation = {
   categories: [
@@ -339,8 +292,10 @@ const navigation = {
     }
   ],
   pages: [
-    { name: 'Company', href: '#' },
-    { name: 'Stores', href: '#' }
+    { name: 'About Me', href: '#', fontIcon: ['fas', 'user-astronaut'] },
+    { name: 'Skills', href: '#', fontIcon: ['fas', 'brain'] },
+    { name: 'Projects', href: '#', fontIcon: ['fas', 'laptop-code'] },
+    { name: 'Contacts', href: '#', fontIcon: ['fas', 'address-card'] }
   ]
 }
 
@@ -352,16 +307,9 @@ export default defineComponent({
     PopoverButton,
     PopoverGroup,
     PopoverPanel,
-    Tab,
-    TabGroup,
-    TabList,
-    TabPanel,
-    TabPanels,
     TransitionChild,
     TransitionRoot,
     MenuIcon,
-    SearchIcon,
-    ShoppingBagIcon,
     XIcon
   },
   setup () {
@@ -377,11 +325,6 @@ export default defineComponent({
 
 <style>
 .author {
-  text-shadow:1px 1px 0 rgb(223,223,223),2px 2px 0 rgb(191,191,191),3px 3px 0 rgb(159,159,159),4px 4px 0 rgb(128,128,128),5px 5px 0 rgb(96,96,96),6px 6px 0 rgb(64,64,64),7px 7px 0 rgb(32,32,32),8px 8px 1px rgba(0,0,0,1);
-  -webkit-text-shadow:1px 1px 0 rgb(223,223,223),2px 2px 0 rgb(191,191,191),3px 3px 0 rgb(159,159,159),4px 4px 0 rgb(128,128,128),5px 5px 0 rgb(96,96,96),6px 6px 0 rgb(64,64,64),7px 7px 0 rgb(32,32,32),8px 8px 1px rgba(0,0,0,1);
-  -moz-text-shadow:1px 1px 0 rgb(223,223,223),2px 2px 0 rgb(191,191,191),3px 3px 0 rgb(159,159,159),4px 4px 0 rgb(128,128,128),5px 5px 0 rgb(96,96,96),6px 6px 0 rgb(64,64,64),7px 7px 0 rgb(32,32,32),8px 8px 1px rgba(0,0,0,1);
-  color:#ffffff;
-  font-size:55px;
-  font-family:Verdana, Geneva, sans-serif;
+  color: #4018ac;
 }
 </style>
