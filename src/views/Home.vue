@@ -1,11 +1,10 @@
 <template>
-  <article v-if="isLoading">
+  <section v-if="isLoading">
     <LoadingSpinner />
-  </article>
-  <article v-else>
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </article>
+  </section>
+  <section v-else>
+    <HelloWorld />
+  </section>
 </template>
 
 <script lang="ts">

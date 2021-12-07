@@ -1,64 +1,65 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa" target="_blank" rel="noopener">pwa</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript" target="_blank" rel="noopener">typescript</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+  <article class="flex flex-wrap">
+    <div class="mt-7 mx-auto max-w-7xl px-4 sm:mt-10 sm:px-6 md:mt-12 lg:mt-16 lg:px-8 xl:mt-24">
+      <div class="sm:text-center lg:text-left">
+        <h4 class="uppercase text-xl my-2">Hi There &#128075;, I am</h4>
+        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+          <span class="text-indigo-600 mr-2">Christopher</span>
+          <span>Odhiambo</span>
+        </h1>
+        <p class="mt-2 text-base text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0 capitalise">
+          Am a Passionate Fullstack (MEVN & MERN stack) Web Developer based in Mombasa - Kenya, that loves creating things for the web. If you're looking for a Developer to add to your team, I would love to hear from you.
+        </p>
+        <div class="text-center mt-4 py-2 px-4 text-indigo-600">
+          <a href="https://github.com/DevHumbleChris" class="text-2xl mx-2">
+            <FontAwesomeIcon :icon="['fab', 'github']" />
+          </a>
+          <a href="https://www.instagram.com/am.chris_ke/" class="text-2xl mx-2">
+            <FontAwesomeIcon :icon="['fab', 'instagram']" />
+          </a>
+          <a href="https://www.facebook.com/people/Humble-Chris/100011196098630/" class="text-2xl mx-2">
+            <FontAwesomeIcon :icon="['fab', 'facebook-square']" />
+          </a>
+          <a href="https://www.linkedin.com/in/dev-humble-chris-2870331aa/" class="text-2xl mx-2">
+            <FontAwesomeIcon :icon="['fab', 'linkedin']" />
+          </a>
+          <a href="https://twitter.com/AmChrisKE" class="text-2xl mx-2">
+            <FontAwesomeIcon :icon="['fab', 'twitter']" />
+          </a>
+          <a href="https://wa.me/message/BSLLTZE6NKUIF1" class="text-2xl mx-2">
+            <FontAwesomeIcon :icon="['fab', 'whatsapp']" />
+          </a>
+        </div>
+        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+          <div class="rounded-md shadow">
+            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+              <FontAwesomeIcon :icon="['fas', 'pen-fancy']" class="mx-1" />
+              Hire Me
+            </a>
+          </div>
+          <div class="mt-3 sm:mt-0 sm:ml-3">
+            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+              <FontAwesomeIcon :icon="['fas', 'file-download']" class="mx-1" />
+              Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-xl">
+      <img src="../assets/Programming-rafiki.png" alt="Programming-rafiki">
+    </div>
+  </article>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  name: 'HelloWorld'
 })
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style>
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <section>
+  <main>
     <Navbar />
     <router-view/>
-  </section>
+  </main>
 </template>
 
 <script lang="ts">
