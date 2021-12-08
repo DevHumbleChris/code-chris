@@ -1,5 +1,5 @@
 <template>
-  <article class="flex flex-wrap">
+  <article class="flex HelloWorld">
     <div class="mt-7 mx-auto max-w-7xl px-4 sm:mt-10 sm:px-6 md:mt-12 lg:mt-16 lg:px-8 xl:mt-24">
       <div class="sm:text-center lg:text-left">
         <h4 class="uppercase text-xl my-2">Hi There &#128075;, I am</h4>
@@ -62,4 +62,29 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+@media screen and (max-width: 640px) {
+  .HelloWorld {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 640px) {
+  .HelloWorld {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) {
+  .HelloWorld {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .HelloWorld {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .HelloWorld {
+    flex-direction: row;
+  }
+}
 </style>
