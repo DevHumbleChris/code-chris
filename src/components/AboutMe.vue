@@ -8,9 +8,9 @@
         ABOUT ME &#128536;
       </h2>
     </div>
-    <div class="flex justify-between items-center p-2">
+    <div class="flex flexing justify-between items-center p-2">
       <div class="max-w-3xl p-2 mr-5">
-        <p class="text-base text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0 capitalize">
+        <p class="text-lg text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0 capitalize">
           Am a tech ethuasist &#128175;, who loves spending most of his times catching up with trend on the latest technologies and code. I used to write poems but now i got focused into programming &#128104;. I am passionate about
           <span class="text-indigo-800 mx-1">JavaScript &#128175;</span>
           and its all related stacks. Recently I did finish my Diploma Studies in
@@ -18,29 +18,58 @@
           at
           <span class="text-blue-900">Kenya Coast National Polytechnic</span>
         </p>
-        <p class="mt-2 text-base text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0 capitalize">
+        <p class="mt-2 text-lg text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0 capitalize">
           Other than coding, I spend most of my times reading articles from the
           <span class="text-indigo-800">daily.dev</span>
           website. I've also been trying to read more so feel free to reach out to me with any book recommendations.
         </p>
+        <div class="mt-2 text-lg text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0 capitalize">
+          <h3 class="text-xl capitalize text-indigo-500 my-3 text-center">Besides</h3>
+          <Typewriter
+            :replace="replace"
+            :type-interval="100"
+            :replace-interval="1000"
+          />
+          <Typewriter />
+        </div>
       </div>
       <div class="max-w-2xl">
-        <p class="text-base">Check Out My daily.dev card</p>
+        <p class="text-xl capitalize text-indigo-500 my-3 text-center">Check Out My daily.dev card.</p>
         <div class="max-w-xs">
-          <img src="../assets/AmChrisKE.png" alt="AmChrisKE" class="">
+          <img src="../assets/AmChrisKE.png" alt="AmChrisKE" class="object-cover">
         </div>
+        <!-- <a href="https://app.daily.dev/AmChrisKE" class="max-w-xs">
+          <img src="https://api.daily.dev/devcards/d3ea14fc089a472d86ab7cd8d6edf422.png?r=jhi" width="400" alt="Christopher Odhiambo's Dev Card"/>
+        </a> -->
       </div>
     </div>
   </article>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
+import Typewriter from 'typewriter-vue'
+import TypeWriter from '@/types/TypeWriter'
 
 export default defineComponent({
   name: 'AboutMe',
+  components: {
+    Typewriter
+  },
   setup () {
-    return {}
+    const replace = ref<TypeWriter[]>([
+      {
+        from: 'Swimming',
+        to: 'Travelling'
+      },
+      {
+        from: 'Watching Movies',
+        to: 'Gaming'
+      }
+    ])
+    return {
+      replace
+    }
   }
 })
 </script>
@@ -63,28 +92,10 @@ export default defineComponent({
 }
 
 @media screen and (max-width: 640px) {
-  .AboutMe {
+  .flexing {
     flex-direction: column;
-  }
-}
-@media screen and (min-width: 640px) {
-  .AboutMe {
-    flex-direction: column;
-  }
-}
-@media screen and (min-width: 768px) {
-  .AboutMe {
-    flex-direction: column;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .AboutMe {
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .AboutMe {
-    flex-direction: row;
+    justify-content: left;
+    align-items: initial
   }
 }
 </style>
