@@ -120,10 +120,6 @@ import { ref, defineComponent } from 'vue'
 import {
   Dialog,
   DialogOverlay,
-  // Popover,
-  // PopoverButton,
-  // PopoverGroup,
-  // PopoverPanel,
   TransitionChild,
   TransitionRoot
 } from '@headlessui/vue'
@@ -133,10 +129,6 @@ export default defineComponent({
   components: {
     Dialog,
     DialogOverlay,
-    // Popover,
-    // PopoverButton,
-    // PopoverGroup,
-    // PopoverPanel,
     TransitionChild,
     TransitionRoot,
     MenuIcon,
@@ -145,7 +137,7 @@ export default defineComponent({
   setup () {
     const open = ref(false)
     const pages = ref([
-      { name: 'About Me', href: '#', fontIcon: ['fas', 'user-astronaut'] },
+      { name: 'About Me', href: '#AboutMe', fontIcon: ['fas', 'user-astronaut'] },
       { name: 'Skills', href: '#', fontIcon: ['fas', 'brain'] },
       { name: 'Projects', href: '#', fontIcon: ['fas', 'laptop-code'] },
       { name: 'My Blog', href: '/about', fontIcon: ['fas', 'book-reader'] },

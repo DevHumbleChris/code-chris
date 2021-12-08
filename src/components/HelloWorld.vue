@@ -7,7 +7,7 @@
           <span class="text-indigo-600 mr-2">Christopher</span>
           <span>Odhiambo</span>
         </h1>
-        <p class="mt-2 text-base text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0 capitalise">
+        <p class="mt-2 text-base text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0 capitalize">
           Am a Passionate Fullstack (MEVN & MERN stack) Web Developer based in Mombasa - Kenya, that loves creating things for the web. If you're looking for a Developer to add to your team, I would love to hear from you.
         </p>
         <div class="text-center mt-4 py-2 px-4 text-indigo-600">
