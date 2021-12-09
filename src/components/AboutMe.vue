@@ -36,12 +36,12 @@
       </div>
       <div class="max-w-2xl">
         <p class="text-xl capitalize text-indigo-500 my-3 text-center">Check Out My daily.dev card.</p>
-        <div class="max-w-xs">
+        <!-- <div class="max-w-xs">
           <img src="../assets/AmChrisKE.png" alt="AmChrisKE" class="object-cover">
-        </div>
-        <!-- <a href="https://app.daily.dev/AmChrisKE" class="max-w-xs">
+        </div> -->
+        <a href="https://app.daily.dev/AmChrisKE" class="max-w-xs">
           <img src="https://api.daily.dev/devcards/d3ea14fc089a472d86ab7cd8d6edf422.png?r=jhi" width="400" alt="Christopher Odhiambo's Dev Card"/>
-        </a> -->
+        </a>
       </div>
     </div>
   </article>
@@ -92,7 +92,35 @@ export default defineComponent({
   .flexing {
     flex-direction: column;
     justify-content: left;
-    align-items: initial
+    align-items: initial;
+  }
+}
+@media screen and (min-width: 640px) {
+  .flexing {
+    flex-direction: column;
+    justify-content: left;
+    align-items: initial;
+  }
+}
+@media screen and (min-width: 768px) {
+  .flexing {
+    flex-direction: column;
+    justify-content: left;
+    align-items: initial;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .flexing {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .flexing {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 </style>
