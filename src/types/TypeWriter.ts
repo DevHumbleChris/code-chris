@@ -1,6 +1,3 @@
-interface TypeWriter {
-  from: string,
-  to: string
-}
+type TypeWriter = string
 
 export default TypeWriter

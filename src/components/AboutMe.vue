@@ -11,7 +11,7 @@
     <div class="flex flexing justify-between items-center p-2">
       <div class="max-w-3xl p-2 mr-5">
         <p class="text-lg text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0 capitalize">
-          Am a tech ethuasist &#128175;, who loves spending most of his times catching up with trend on the latest technologies and code. I used to write poems but now i got focused into programming &#128104;. I am passionate about
+          Am a tech ethuasist &#128175;, who loves spending most of his times catching up with trend on the latest technologies and code. I used to write poems but now i got focused into programming &#128187;. I am passionate about
           <span class="text-indigo-800 mx-1">JavaScript &#128175;</span>
           and its all related stacks. Recently I did finish my Diploma Studies in
           <span class="text-indigo-800 mx-1">Information Communication Technology</span>
@@ -24,13 +24,14 @@
           website. I've also been trying to read more so feel free to reach out to me with any book recommendations.
         </p>
         <div class="mt-2 text-lg text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-4 md:text-xl lg:mx-0 capitalize">
-          <h3 class="text-xl capitalize text-indigo-500 my-3 text-center">Besides</h3>
-          <Typewriter
-            :replace="replace"
-            :type-interval="100"
-            :replace-interval="1000"
-          />
-          <Typewriter />
+          <h3 class="text-2xl capitalize text-indigo-500 my-3 text-center">Besides &#129396;</h3>
+          <p class="text-xl text-center">
+            <span class="mx-1">I Love</span>
+            <VueWriter
+              class="text-red-600 inline underscore"
+              :array="replace"
+            />
+          </p>
         </div>
       </div>
       <div class="max-w-2xl">
@@ -48,24 +49,20 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import Typewriter from 'typewriter-vue'
+import VueWriter from 'vue-writer'
 import TypeWriter from '@/types/TypeWriter'
 
 export default defineComponent({
   name: 'AboutMe',
   components: {
-    Typewriter
+    VueWriter
   },
   setup () {
     const replace = ref<TypeWriter[]>([
-      {
-        from: 'Swimming',
-        to: 'Travelling'
-      },
-      {
-        from: 'Watching Movies',
-        to: 'Gaming'
-      }
+      'Swimming.',
+      'Travelling.',
+      'Watching Movies.',
+      'Gaming.'
     ])
     return {
       replace
